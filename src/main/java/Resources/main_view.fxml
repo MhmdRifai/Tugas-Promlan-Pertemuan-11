@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.datasensorfx.MainViewController">
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+              AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+            <children>
+                <Label text="Monitoring Data Sensor" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Suhu:" />
+                        <TextField fx:id="suhuField" promptText="°C" prefWidth="80" />
+                        <Label text="Kelembapan:" />
+                        <TextField fx:id="kelembapanField" promptText="%" prefWidth="80" />
+                        <Label text="Gas:" />
+                        <TextField fx:id="gasField" promptText="ppm" prefWidth="80" />
+                    </children>
+                </HBox>
+
+                <HBox spacing="8">
+                    <children>
+                        <Button text="Tambah" onAction="#handleAdd" />
+                        <Button text="Hapus" onAction="#handleDelete" />
+                        <Button text="Bersihkan" onAction="#handleClear" />
+                    </children>
+                </HBox>
+
+                <TableView fx:id="tableView" prefHeight="280">
+                    <columns>
+                        <TableColumn fx:id="waktuCol" text="Waktu" prefWidth="180" />
+                        <TableColumn fx:id="suhuCol" text="Suhu (°C)" prefWidth="120" />
+                        <TableColumn fx:id="kelembapanCol" text="Kelembapan (%)" prefWidth="120" />
+                        <TableColumn fx:id="gasCol" text="Gas (ppm)" prefWidth="120" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding><Insets top="4" right="4" bottom="4" left="4"/></padding>
+        </VBox>
+    </children>
+</AnchorPane>

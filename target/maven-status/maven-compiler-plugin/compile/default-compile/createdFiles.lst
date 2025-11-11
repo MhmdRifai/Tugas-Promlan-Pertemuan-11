@@ -1,0 +1,4 @@
+datasensorfx\App.class
+datasensorfx\SensorData.class
+com\mycompany\datasensorfx\DataSensorFX.class
+datasensorfx\MainViewController.class
